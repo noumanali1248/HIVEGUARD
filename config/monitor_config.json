@@ -1,0 +1,88 @@
+{
+    "monitored_registry_keys": [
+        [
+            "HKEY_CURRENT_USER",
+            "Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+        ],
+        [
+            "HKEY_LOCAL_MACHINE",
+            "Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+        ],
+        [
+            "HKEY_CURRENT_USER",
+            "Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce"
+        ],
+        [
+            "HKEY_LOCAL_MACHINE",
+            "Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce"
+        ],
+        [
+            "HKEY_LOCAL_MACHINE",
+            "Software\\Microsoft\\Windows\\CurrentVersion\\RunOnceEx"
+        ],
+        [
+            "HKEY_LOCAL_MACHINE",
+            "SYSTEM\\CurrentControlSet\\Control\\Session Manager\\BootExecute"
+        ],
+        [
+            "HKEY_LOCAL_MACHINE",
+            "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon"
+        ],
+        [
+            "HKEY_LOCAL_MACHINE",
+            "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options"
+        ],
+        [
+            "HKEY_CURRENT_USER",
+            "Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows"
+        ],
+        [
+            "HKEY_LOCAL_MACHINE",
+            "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run"
+        ],
+        [
+            "HKEY_CURRENT_USER",
+            "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run"
+        ]
+    ],
+    "startup_folders": [
+        "%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup",
+        "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp"
+    ],
+    "allowlist": {
+        "values": [
+            "C:\\Windows\\System32\\userinit.exe",
+            "C:\\Windows\\System32\\OneDrive.exe"
+        ],
+        "paths": [
+            "C:\\Windows\\System32\\",
+            "C:\\Program Files\\"
+        ]
+    },
+    "scoring": {
+        "warning_threshold": 50,
+        "critical_threshold": 80
+    },
+    "alerting": {
+        "eventlog": true,
+        "email": {
+            "enabled": false,
+            "smtp_server": "smtp.company.com",
+            "port": 587,
+            "use_tls": true,
+            "username": "",
+            "password": "",
+            "recipients": [
+                "security@company.com"
+            ]
+        },
+        "syslog": {
+            "enabled": false,
+            "server": "192.168.1.100",
+            "port": 514
+        }
+    },
+    "monitoring_interval_seconds": 5,
+    "log_rotation_mb": 10,
+    "log_backup_count": 10
+}
